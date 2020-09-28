@@ -1,6 +1,6 @@
-#EXCERCISE
+# EXCERCISE
 
-##REACT AS THE FRAMEWORK FOR THIS EXCERSICE
+## REACT AS THE FRAMEWORK FOR THIS EXCERSICE
 
 I structured this projects in components:
 - NavBar
@@ -10,23 +10,23 @@ I structured this projects in components:
 - Name Submit
 - Footer
 
-###NavBar
+### NavBar
 
 For the NavBar I use bootstrap for it, because it already have the structure and it was very fast to adjust for I was needing for.
 Also for the search icon I used the react-icons library.
 The section which you can navigate threw is "Past Trials" and for this I used the react-router component.
 
-###Banner
+### Banner
 
 The banner is the second component which is based on a div with the background-image.
 This banner has just the information and a link to Wikipedia.
 The bar for the closing days was coded with a Bootstrap progress bar, just for the the diagram and the info is just hard coded.
 
-###Notification
+### Notification
 
 The notification component was made with an alert role, so if the user wants to close it, it just disappeared and all the informacion move up.
 
-###VotingCards
+### VotingCards
 
 This is the most important component, where is all the interaction.
 I hardcoded all the data in a complement file with a JSON structure, and from where I used all the info stored in an array to do a map and display all the voting cards.
@@ -36,16 +36,16 @@ In the progress Bar if one option has the 100% of the votes, the hand and the % 
 When a user click vote now before he had select one option it will be display a notification. I used for this react-toastify.
 
 
-###NameSubmit
+### NameSubmit
 
 Clicking on this button will display a Bootstrap modal, in witch I added an input and functionality to the closing button.
 This modal was just add as a diagram exercise.
 
-###Fotter
+### Fotter
 
 On the footer was used the react-icons for the social icons and they are links to the pages.
 
-##STYLE
+## STYLE
 
 I styled this page using css and SASS, because it was easier sometimes when I needed to style classes as child of other classes, also I defined a few variables with made more easy to define the same color for the different components.
 This page is responsive!!!
