@@ -37,7 +37,7 @@ class VotingCards extends React.Component {
   voteNow = (id) => {
     if (!this.state.voteType) {
       return (
-        toast.warning("Selecciona la opción por la que quieres votar", {
+        toast.warning("Please choose an option to vote", {
           position: toast.POSITION.BOTTOM_RIGHT,
         })
       )
@@ -87,8 +87,14 @@ class VotingCards extends React.Component {
             return (
               <div className="peopleContainer" key={item.id} >
                 <div className="personContainer">
-                  <div className="imageFilter">
-                    <img className="personImage" src={item.image} alt={item.name} />
+                  <div id="personElement">
+                    <div className="personImage" style={{
+                      backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0,0.8), rgba(255,255,255,0)), url("${item.image}")`,
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                    }}>
+                    </div>
                   </div>
                   <h3 className="personName">{item.name}</h3>
                   {
@@ -144,6 +150,7 @@ class VotingCards extends React.Component {
           }
           )}
         </Row>
+        <ToastContainer />
       </Container>
     );
   }
