@@ -14,7 +14,7 @@ class Header extends React.Component {
             <Nav className="positionNavBar">
               <Nav.Link href="/PastTrials">Past Trials</Nav.Link>
               <Nav.Link >How It Works</Nav.Link>
-              <Nav.Link href="#pricing">Log In/Sign Up</Nav.Link>
+              <Nav.Link >Log In/Sign Up</Nav.Link>
               <Button><BiSearch /></Button>
             </Nav>
           </Navbar>

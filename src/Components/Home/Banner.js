@@ -1,9 +1,11 @@
 import React from 'react';
 import './Banner.scss';
+import { ProgressBar } from "react-bootstrap";
 
 
 class Banner extends React.Component {
   render() {
+    const progressDays = 22
     return (
       <div className="banner">
         <div className="bannerContainer">
@@ -14,6 +16,11 @@ class Banner extends React.Component {
           <h5 className="bannerVerdict">What´s Your Verdict?</h5>
           <div className="countUp" ><img className="handUp" src="/Images/up.png" /></div>
           <div className="countDown" ><img className="handDown" src="/Images/down.png" /></div>
+        </div>
+        <div className="progressDaysContainer">
+          <ProgressBar now={progressDays} />
+          <h4 className="closingIn">CLOSING IN</h4>
+          <h4 className="numberDown"><span className="numberDownBold">22</span> days</h4>
         </div>
       </div>
     );

@@ -4,6 +4,46 @@
     background: url("/Images/pope.jpg") no-repeat center center; ;
     height: 50rem;
     background-size: cover;
+
+    .progress {
+      background-color: rgba($color: white, $alpha: .5) !important;
+      height: 3rem !important;
+      border-radius: 0 !important;
+    
+      .progress-bar {
+        background-color: rgba($color: black, $alpha: .3) !important;
+      }
+    }
+    
+    .progressDaysContainer {
+      position: relative;
+      transform: translate(0, 767%); 
+    }
+    
+    .closingIn {
+      position: absolute;
+      left: 200px;
+      top: 40%;
+      font-size: 10px;
+      font-weight: 500;
+      font-family: Lato;
+      color: white;
+    }
+    
+    .numberDown {
+      position: absolute;
+      left: 290px;
+      top: 20%;
+      text-align: initial;
+      font-size: 25px;
+      font-weight: 300;
+      font-family: Lato;
+      color: #333333;
+
+      .numberDownBold {
+        font-weight: 500;
+      }
+    }
   }
 
   .bannerContainer {
@@ -85,20 +125,20 @@
   /* Mobile */
   @media screen and (max-width: 981px) {
     .bannerContainer {
-      width: 24rem;
+      width: 23.5rem;
       height: 29rem;
       transform: translate(0, 50%); 
 
       .countUp {
         width: 12rem;
         height: 5rem;
-        transform: translate(-28%, 145%); 
+        transform: translate(-32%, 185%); 
       }
       
       .countDown {
         width: 12rem;
         height: 5rem;
-          transform: translate(56%, 145%); 
+          transform: translate(39%, 185%); 
       }
 
       .handUp, .handDown {
@@ -109,6 +149,35 @@
     .banner {
       height: 15rem;
 
+      .progressDaysContainer {
+        position: relative;
+        transform: translate(0, -579%); 
+      }
+      
+      .closingIn {
+        position: absolute;
+        left: 10px;
+        top: 40%;
+        font-size: 10px;
+        font-weight: 500;
+        font-family: Lato;
+        color: white;
+      }
+      
+      .numberDown {
+        position: absolute;
+        left: 100px;
+        top: 20%;
+        text-align: initial;
+        font-size: 25px;
+        font-weight: 300;
+        font-family: Lato;
+        color: #333333;
+  
+        .numberDownBold {
+          font-weight: 500;
+        }
+      }
     }
   }
 

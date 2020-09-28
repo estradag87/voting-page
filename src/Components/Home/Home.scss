@@ -215,7 +215,7 @@ button {
     }
 
     .personContainer {
-      margin-top: 10px;
+      margin: 0;
     }
 
     .votes{
@@ -223,23 +223,27 @@ button {
     }
 
     .personName {
-      bottom: 51%; 
+      bottom: 60%; 
+      left: 40px;
       padding-right: 10px;
+      line-height: 40px;
    }
 
    .iconHand {
-    bottom: 55%;
+    bottom: 63%;
+    left: 0;
     }
 
     .personCategory {
-      bottom: 47%;
+      bottom: 53%;
+      left: 40px;
       font-size: 16px;
     }
 
     .personInfo {
       position: absolute;
-      top: 60%;
-      left: 55%;
+      top: 54%;
+      left: 50%;
       font-size: 18px;
       text-shadow: none;
       margin-right: 1px;
@@ -248,8 +252,8 @@ button {
     
     .thanksInfo {
       position: absolute;
-      top: 55%;
-      left: 36%;
+      top: 50%;
+      left: 33%;
       font-size: 18px;
       text-shadow: none;
     }
@@ -259,49 +263,25 @@ button {
     }
     
     .countUp {
-      background: $hand-up-color;
-      border: none;
-      position: absolute;
-      top: 75%;
-      left: 14%;
+      top: 68%;
+      left: 16%;
       transform: translate(-50%, -50%); 
     }
     
     .countDown {
-        background: $hand-down-color;
-        border: none;
-        position: absolute;
-        top: 75%;
-        left: 22%;
+        top: 68%;
+        left: 29%;
         transform: translate(-50%, -50%); 
     }
     
     .voteNow {
-      background: transparent;
-      border: 1px solid white;
-      position: absolute;
-      top: 75%;
-      left: 35%;
-      transform: translate(-50%, -50%); 
-      color: white;
-      font-size: 13px;
-      font-family: Lato;
-      font-weight: 600;
-      padding: 8px 15px;
+      top: 68%;
+      left: 48%;
     }
     
     .voteAgain {
-      background: transparent;
-      border: 1px solid white;
-      position: absolute;
-      top: 75%;
-      left: 20%;
-      transform: translate(-50%, -50%); 
-      color: white;
-      font-size: 13px;
-      font-family: Lato;
-      font-weight: 600;
-      padding: 8px 15px;
+      top: 68%;
+      left: 23%;
     }
   }
 

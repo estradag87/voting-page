@@ -2,7 +2,8 @@ import React from 'react';
 import './Home.scss';
 import { PERSON_LIST } from "../Data"
 import { Row, Col, Container, ProgressBar } from "react-bootstrap";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class VotingCards extends React.Component {
   constructor(props) {
