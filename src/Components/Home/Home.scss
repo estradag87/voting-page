@@ -1,3 +1,13 @@
+@import "../../Variables.scss";
+
+.votes{
+  font-size: 40px;
+  font-weight: 300;
+  font-family: Lato;
+  color: #333333;
+  margin-top: 40px;
+}
+
 .peopleContainer {
     position: relative;
     text-align: center;
@@ -5,6 +15,8 @@
 
 .personContainer {
   margin: 15px;
+  max-width: 33rem;
+  max-height: 33rem;
 }
 
 
@@ -17,22 +29,47 @@
 
 .personName {
     position: absolute;
-    bottom: 32%;
-    left: 55px;
+    bottom: 41%;
+    left: 52px;
     font-size: 45px;
     font-weight: 600;
     font-family: Lato;
     color: white;
     text-shadow: 1px 1px 2px black;
     text-align: initial;
+    padding-right: 100px;
+}
+
+.iconHand {
+  position: absolute;
+  bottom: 44%;
+  left: 16px;
+  width: 28px;
+  height: 28px;
+}
+
+.personCategory {
+  position: absolute;
+  bottom: 38%;
+  left: 55px;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: Lato;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  text-align: initial;
+}
+
+.personCategoryBold {
+  font-weight: 700;
 }
 
 .personInfo {
   position: absolute;
-  top: 70%;
+  top: 66%;
   left: 40%;
   transform: translate(-50%, -50%); 
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   font-family: Lato;
   color: white;
@@ -42,7 +79,7 @@
 
 .thanksInfo {
   position: absolute;
-  top: 70%;
+  top: 66%;
   left: 23%;
   transform: translate(-50%, -50%); 
   font-size: 15px;
@@ -58,19 +95,19 @@
 }
 
 .countUp {
-  background: #51bab3;
+  background: $hand-up-color;
   border: none;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 14%;
   transform: translate(-50%, -50%); 
 }
 
 .countDown {
-    background: #f3b333;
+    background: $hand-down-color;
     border: none;
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 22%;
     transform: translate(-50%, -50%); 
 }
@@ -79,11 +116,13 @@
   background: transparent;
   border: 1px solid white;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 35%;
   transform: translate(-50%, -50%); 
   color: white;
   font-size: 13px;
+  font-family: Lato;
+  font-weight: 600;
   padding: 8px 15px;
 }
 
@@ -91,11 +130,13 @@
   background: transparent;
   border: 1px solid white;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 20%;
   transform: translate(-50%, -50%); 
   color: white;
   font-size: 13px;
+  font-family: Lato;
+  font-weight: 600;
   padding: 8px 15px;
 }
 
@@ -107,18 +148,19 @@
 }
 
 .progress {
-  background-color: #f3b333 !important;
+  background-color: $hand-down-color !important;
   height: 3rem !important;
   border-radius: 0 !important;
 
   .progress-bar {
-    background-color: #51bab3 !important;
+    background-color: $hand-up-color !important;
   }
 }
 
 .progressBarContainer {
   position: relative;
   text-align: center;
+  transform: translate(0, -100%); 
 }
 
 .progressHandUp {
@@ -162,6 +204,10 @@
   color: white;
 }
 
+button {
+  outline-color: white !important;
+}
+
   /* Mobile */
   @media screen and (max-width: 981px) {
     .personImage {
@@ -169,7 +215,93 @@
     }
 
     .personContainer {
-      margin: 15px 0;
+      margin-top: 10px;
+    }
+
+    .votes{
+      margin-top: 600px;
+    }
+
+    .personName {
+      bottom: 51%; 
+      padding-right: 10px;
+   }
+
+   .iconHand {
+    bottom: 55%;
+    }
+
+    .personCategory {
+      bottom: 47%;
+      font-size: 16px;
+    }
+
+    .personInfo {
+      position: absolute;
+      top: 60%;
+      left: 55%;
+      font-size: 18px;
+      text-shadow: none;
+      margin-right: 1px;
+      width: 80%;
+    }
+    
+    .thanksInfo {
+      position: absolute;
+      top: 55%;
+      left: 36%;
+      font-size: 18px;
+      text-shadow: none;
+    }
+    
+    .people {
+        justify-content: center;
+    }
+    
+    .countUp {
+      background: $hand-up-color;
+      border: none;
+      position: absolute;
+      top: 75%;
+      left: 14%;
+      transform: translate(-50%, -50%); 
+    }
+    
+    .countDown {
+        background: $hand-down-color;
+        border: none;
+        position: absolute;
+        top: 75%;
+        left: 22%;
+        transform: translate(-50%, -50%); 
+    }
+    
+    .voteNow {
+      background: transparent;
+      border: 1px solid white;
+      position: absolute;
+      top: 75%;
+      left: 35%;
+      transform: translate(-50%, -50%); 
+      color: white;
+      font-size: 13px;
+      font-family: Lato;
+      font-weight: 600;
+      padding: 8px 15px;
+    }
+    
+    .voteAgain {
+      background: transparent;
+      border: 1px solid white;
+      position: absolute;
+      top: 75%;
+      left: 20%;
+      transform: translate(-50%, -50%); 
+      color: white;
+      font-size: 13px;
+      font-family: Lato;
+      font-weight: 600;
+      padding: 8px 15px;
     }
   }
 

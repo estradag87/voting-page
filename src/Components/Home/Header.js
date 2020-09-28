@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import '../App/App.css';
+import { Navbar, Nav, Button } from 'react-bootstrap';
+import './Header.scss';
+import { BiSearch } from 'react-icons/bi';
 
 
 class Header extends React.Component {
@@ -8,14 +9,14 @@ class Header extends React.Component {
     return (
       <div className="Header">
         <>
-          <Navbar bg="light" variant="light">
+          <Navbar >
             <Navbar.Brand href="#home">Rule of Thumb</Navbar.Brand>
-            <Nav className="mr-auto">
+            <Nav className="positionNavBar">
               <Nav.Link href="/PastTrials">Past Trials</Nav.Link>
-              <Nav.Link href="#features">How It Works</Nav.Link>
+              <Nav.Link >How It Works</Nav.Link>
               <Nav.Link href="#pricing">Log In/Sign Up</Nav.Link>
+              <Button><BiSearch /></Button>
             </Nav>
-            <Button variant="outline-info">Search</Button>
           </Navbar>
         </>
       </div>

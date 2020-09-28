@@ -1,135 +1,121 @@
+  @import "../../Variables.scss";
+  
+  .banner {
+    background: url("/Images/pope.jpg") no-repeat center center; ;
+    height: 50rem;
+    background-size: cover;
+  }
+
   .bannerContainer {
-    position: relative;
-    text-align: center;
-  }
-  
-  
-  .bannerImage {
-    max-width: 100%;
-    text-align: center;
-    display: inline;
-  }
-  
-  
-  .bannerName {
-      position: absolute;
-      bottom: 32%;
-      left: 55px;
-      font-size: 45px;
-      font-weight: 600;
-      font-family: Lato;
-      color: white;
-      text-shadow: 1px 1px 2px black;
-      text-align: initial;
-  }
-  
-  .bannerInfo {
-    position: absolute;
-    top: 70%;
-    left: 40%;
-    transform: translate(-50%, -50%); 
-    font-size: 15px;
-    font-weight: 300;
-    font-family: Lato;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    text-align: initial;
-  }
-  
-  
-  .countUp {
-    background: #51bab3;
-    border: none;
-    position: absolute;
-    top: 80%;
-    left: 14%;
-    transform: translate(-50%, -50%); 
-  }
-  
-  .countDown {
-      background: #f3b333;
+    width: 28rem;
+    height: 24rem;
+    padding: 2rem;
+    background-color: rgba($color: black, $alpha: .4);
+    transform: translate(50%, 30%); 
+    backdrop-filter: blur(20px);
+
+    .countUp {
+      background: $hand-up-color;
       border: none;
-      position: absolute;
-      top: 80%;
-      left: 22%;
-      transform: translate(-50%, -50%); 
-  }
-  
-  
-  
-  .handUp, .handDown {
-      width: 30px;
-      height: auto;
-      padding: 3px;
-      margin-bottom: 3px;
-  }
-  
-  .progress {
-    background-color: #f3b333 !important;
-    height: 3rem !important;
-    border-radius: 0 !important;
-  
-    .progress-bar {
-      background-color: #51bab3 !important;
+      width: 14rem;
+      height: 5rem;
+      transform: translate(-28%, 120%); 
     }
-  }
-  
-  .progressBarContainer {
-    position: relative;
-    text-align: center;
-  }
-  
-  .progressHandUp {
-    position: absolute;
-    left: 15px;
-    top: 15%;
-    text-align: initial;
-    width: 30px;
-    height: auto;
     
+    .countDown {
+        background: $hand-down-color;
+        border: none;
+        width: 14rem;
+        height: 5rem;
+        transform: translate(56%, 120%); 
+    }
+
+    .handUp, .handDown {
+      width: 40px;
+      height: auto;
+      transform: translate(250%, 50%); 
+    }
   }
-  
-  .numberUp {
-    position: absolute;
-    left: 55px;
-    top: 15%;
-    text-align: initial;
-    font-size: 25px;
+
+  .bannerOpinion {
+    font-size: 16px;
     font-weight: 300;
     font-family: Lato;
     color: white;
-  }
-  
-  .progressHandDown {
-    position: absolute;
-    right: 15px;
-    top: 15%;
     text-align: initial;
-    width: 30px;
-    height: auto;
+    margin-bottom: 0;
   }
-  
-  .numberDown {
-    position: absolute;
-    right: 55px;
-    top: 15%;
+
+  .bannerName {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: Lato;
+    color: white;
     text-align: initial;
-    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .bannerInfo {
+    font-size: 21px;
     font-weight: 300;
     font-family: Lato;
     color: white;
+    text-align: initial;
+    margin-bottom: 22px;
   }
-  
-    /* Mobile */
-    @media screen and (max-width: 981px) {
-      .personImage {
-        max-width: 100%;
+
+  .bannerMoreInfo {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Lato;
+    color: white;
+    text-align: initial;
+    text-decoration: underline;
+  }
+
+  .bannerVerdict {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Lato;
+    color: white;
+    text-align: initial;
+    margin-top: 28px;
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 981px) {
+    .bannerContainer {
+      width: 24rem;
+      height: 29rem;
+      transform: translate(0, 50%); 
+
+      .countUp {
+        width: 12rem;
+        height: 5rem;
+        transform: translate(-28%, 145%); 
       }
-  
-      .personContainer {
-        margin: 15px 0;
+      
+      .countDown {
+        width: 12rem;
+        height: 5rem;
+          transform: translate(56%, 145%); 
+      }
+
+      .handUp, .handDown {
+        transform: translate(190%, 50%); 
       }
     }
+
+    .banner {
+      height: 15rem;
+
+    }
+  }
+
+
+ 
+
+
   
-  
+
   

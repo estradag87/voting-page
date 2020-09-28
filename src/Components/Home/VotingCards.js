@@ -13,13 +13,25 @@ class VotingCards extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const results = localStorage.getItem('results')
+
+    if (results) {
+      const parsedResults = JSON.parse(results)
+      this.setState(parsedResults)
+    }
+  }
+
+  componentDidUpdate() {
+    const { voteType, ...rest } = this.state
+    localStorage.setItem('results', JSON.stringify(rest))
+  }
+
   voteType = (type) => {
     this.setState({
       voteType: type
     })
   }
-
-
 
   voteNow = (id) => {
     if (!this.state.voteType) {
@@ -65,17 +77,28 @@ class VotingCards extends React.Component {
 
 
   render() {
-    console.log(this.state)
     return (
       <Container>
+        <h2 className="votes">Votes</h2>
         <Row className="people">
           {PERSON_LIST.map((item) => {
             const progressNumber = this.state[item.id] ? this.state[item.id].progressNumber : 50
             return (
               <div className="peopleContainer" key={item.id} >
                 <div className="personContainer">
-                  <img className="personImage" src={item.image} alt={item.name} />
+                  <div className="imageFilter">
+                    <img className="personImage" src={item.image} alt={item.name} />
+                  </div>
                   <h3 className="personName">{item.name}</h3>
+                  {
+                    this.state[item.id] && this.state[item.id].like > this.state[item.id].dislike ?
+                      <img className="iconHand" src="/Images/Bg-hand-up.png" alt="iconHandUp" />
+                      : this.state[item.id] && this.state[item.id].like < this.state[item.id].dislike ?
+                        <img className="iconHand" src="/Images/Bg-hand-down.png" alt="iconHandDown" />
+                        :
+                        null
+                  }
+                  <h5 className="personCategory"><span className="personCategoryBold">{item.months} ago</span> in {item.category}</h5>
                   {
                     this.state[item.id] && this.state[item.id].voted ?
                       <>
@@ -93,10 +116,26 @@ class VotingCards extends React.Component {
                   }
                   <div className="progressBarContainer">
                     <ProgressBar now={progressNumber} />
-                    <img className="progressHandUp" src="/Images/up.png" alt="handUp" />
-                    <h4 className="numberUp">{`${progressNumber}%`}</h4>
-                    <img className="progressHandDown" src="/Images/down.png" alt="handDown" />
-                    <h4 className="numberDown">{`${100 - progressNumber}%`}</h4>
+                    {
+                      this.state[item.id] && !this.state[item.id].like ?
+                        <>
+                        </>
+                        :
+                        <>
+                          <img className="progressHandUp" src="/Images/up.png" alt="handUp" />
+                          <h4 className="numberUp">{`${progressNumber}%`}</h4>
+                        </>
+                    }
+                    {
+                      this.state[item.id] && !this.state[item.id].dislike ?
+                        <>
+                        </>
+                        :
+                        <>
+                          <img className="progressHandDown" src="/Images/down.png" alt="handDown" />
+                          <h4 className="numberDown">{`${100 - progressNumber}%`}</h4>
+                        </>
+                    }
                   </div>
                 </div>
               </div>
