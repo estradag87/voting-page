@@ -15,8 +15,8 @@ class Footer extends React.Component {
         <div className="footerSocial">
           <p>Follow Us</p>
           <div className="footerIcons">
-            <a href="https://www.facebook.com/"><AiFillFacebook /></a>
-            <a href="https://twitter.com/"><AiOutlineTwitter /></a>
+            <a><AiFillFacebook /></a>
+            <a><AiOutlineTwitter /></a>
           </div>
         </div>
       </div>

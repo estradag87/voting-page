@@ -10,9 +10,9 @@ class Header extends React.Component {
       <div className="Header">
         <>
           <Navbar >
-            <Navbar.Brand href="#home">Rule of Thumb</Navbar.Brand>
+            <Navbar.Brand>Rule of Thumb</Navbar.Brand>
             <Nav className="positionNavBar">
-              <Nav.Link href="/PastTrials">Past Trials</Nav.Link>
+              <Nav.Link>Past Trials</Nav.Link>
               <Nav.Link >How It Works</Nav.Link>
               <Nav.Link >Log In/Sign Up</Nav.Link>
               <Button><BiSearch /></Button>
