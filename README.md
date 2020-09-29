@@ -1,6 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# EXCERCISE
 
 In the project directory, you can run:
 
@@ -9,60 +7,54 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## REACT AS THE FRAMEWORK FOR THIS EXCERSICE
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I structured this projects in components:
+- NavBar
+- Banner
+- Notification
+- Voting Cards
+- Name Submit
+- Footer
 
-### `npm run build`
+### NavBar
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For the NavBar I use bootstrap for it, because it already have the structure and it was very fast to adjust for I was needing for.
+Also for the search icon I used the react-icons library.
+The section which you can navigate threw is "Past Trials" and for this I used the react-router component.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Banner
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The banner is the second component which is based on a div with the background-image.
+This banner has just the information and a link to Wikipedia.
+The bar for the closing days was coded with a Bootstrap progress bar, just for the the diagram and the info is just hard coded.
 
-### `npm run eject`
+### Notification
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The notification component was made with an alert role, so if the user wants to close it, it just disappeared and all the informacion move up.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### VotingCards
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This is the most important component, where is all the interaction.
+I hardcoded all the data in a complement file with a JSON structure, and from where I used all the info stored in an array to do a map and display all the voting cards.
+I defined a first state of "votesType" and after this state was changed with an onclick on the voting options, there will be added more states as Likes, Dislikes, progress Number and Voted that is used to control if the user select one option and then click on the vote now of other voting card, also this state display the info in the progress Bar for the results of the voting interact.
+The hand that appears next to the name of the person is directly the option witch has been more votes, and if it´s 50/50 the hand will not display.
+In the progress Bar if one option has the 100% of the votes, the hand and the % on it disappear.
+When a user click vote now before he had select one option it will be display a notification. I used for this react-toastify.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### NameSubmit
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clicking on this button will display a Bootstrap modal, in witch I added an input and functionality to the closing button.
+This modal was just add as a diagram exercise.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Fotter
 
-### Code Splitting
+On the footer was used the react-icons for the social icons and they are links to the pages.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## STYLE
 
-### Analyzing the Bundle Size
+I styled this page using css and SASS, because it was easier sometimes when I needed to style classes as child of other classes, also I defined a few variables with made more easy to define the same color for the different components.
+This page is responsive!!!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
